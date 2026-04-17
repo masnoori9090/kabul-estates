@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kabul Estates — Premium real estate for buyers, sellers, and renters in Kabul, Afghanistan." />
+  <title>Kabul Estates — Premium Real Estate in Kabul</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Manrope:wght@300;400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- SVG Grain Overlay -->
+  <svg class="grain-overlay" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="overlay"/>
+    </filter>
+    <rect width="100%" height="100%" filter="url(#grain)" opacity="0.06"/>
+  </svg>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <nav class="nav__inner container" role="navigation" aria-label="Main navigation">
+      <a href="#hero" class="nav__logo" data-i18n="brand">Kabul Estates</a>
+
+      <ul class="nav__links">
+        <li><a href="#listings-grid" data-i18n="nav_listings">Listings</a></li>
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#services" data-i18n="nav_services">Services</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+
+      <div class="nav__right">
+        <div class="lang-switcher" role="group" aria-label="Language selector">
+          <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <button class="lang-btn" data-lang="dr" aria-pressed="false">دری</button>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <button class="lang-btn" data-lang="ps" aria-pressed="false">پښتو</button>
+        </div>
+        <a href="https://wa.me/937XXXXXXXX?text=Salaam%2C%20I'm%20interested%20in%20a%20property." class="btn btn--sm btn--wa nav__wa" target="_blank" rel="noopener noreferrer" data-i18n="cta_wa_short">WhatsApp</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="#listings-grid" data-i18n="nav_listings">Listings</a></li>
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#services" data-i18n="nav_services">Services</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <div class="mobile-lang" role="group" aria-label="Language selector">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="dr">دری</button>
+        <button class="lang-btn" data-lang="ps">پښتو</button>
+      </div>
+      <a href="https://wa.me/937XXXXXXXX?text=Salaam%2C%20I'm%20interested%20in%20a%20property." class="btn btn--primary mobile-wa" target="_blank" rel="noopener noreferrer" data-i18n="cta_wa_hero">Chat on WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__grid"></div>
+      <div class="hero__mesh"></div>
+    </div>
+
+    <div class="container hero__inner">
+      <div class="hero__content reveal">
+        <span class="eyebrow" data-i18n="hero_eyebrow">Kabul · Afghanistan</span>
+        <h1 class="hero__title">
+          <span data-i18n="hero_title_1">Find Your</span>
+          <em class="accent" data-i18n="hero_title_2">Dream</em>
+          <span data-i18n="hero_title_3">Property in Kabul</span>
+        </h1>
+        <p class="hero__sub" data-i18n="hero_sub">Premium real estate for buyers, sellers, and renters. Trusted by Kabul's finest families since 2010.</p>
+        <div class="hero__ctas">
+          <a href="https://wa.me/937XXXXXXXX?text=Salaam%2C%20I'm%20interested%20in%20a%20property." class="btn btn--primary" target="_blank" rel="noopener noreferrer" data-i18n="cta_wa_hero">Chat on WhatsApp</a>
+          <a href="#listings-grid" class="btn btn--ghost" data-i18n="cta_browse">Browse Listings</a>
+        </div>
+        <div class="hero__stats" aria-label="Agency statistics">
+          <div class="stat">
+            <span class="stat__num">240+</span>
+            <span class="stat__label" data-i18n="stat_listings">Active Listings</span>
+          </div>
+          <div class="stat__divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat__num">14</span>
+            <span class="stat__label" data-i18n="stat_exp">Years Experience</span>
+          </div>
+          <div class="stat__divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat__num">4.9★</span>
+            <span class="stat__label" data-i18n="stat_rating">Client Rating</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Featured Card -->
+      <div class="hero__card-wrap reveal reveal--delay">
+        <div class="hero__float-card">
+          <div class="card__img" style="--img-hue: 150" role="img" aria-label="Wazir Akbar Khan Villa property image">
+            <span class="badge badge--green" data-i18n="tag_featured">Featured</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Wazir Akbar Khan Villa</h3>
+            <div class="card__meta">
+              <span>5 <span data-i18n="meta_bed">Bed</span></span>
+              <span aria-hidden="true">·</span>
+              <span>4 <span data-i18n="meta_bath">Bath</span></span>
+              <span aria-hidden="true">·</span>
+              <span>480 m²</span>
+            </div>
+            <div class="card__footer">
+              <span class="card__price">$850,000</span>
+              <a href="https://wa.me/937XXXXXXXX?text=Interested%20in%20Wazir%20Akbar%20Khan%20Villa" class="btn btn--xs btn--primary" target="_blank" rel="noopener noreferrer" data-i18n="cta_inquire">Inquire Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero__card-deco" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FILTER STRIP ===== -->
+  <section class="filter-strip" id="listings" aria-label="Property search filters">
+    <div class="container">
+      <div class="filter-strip__inner">
+        <div class="filter-group">
+          <label for="filter-type" data-i18n="filter_type">Transaction Type</label>
+          <select id="filter-type" aria-label="Transaction type">
+            <option data-i18n="opt_buy">Buy</option>
+            <option data-i18n="opt_rent">Rent</option>
+            <option data-i18n="opt_sell">Sell</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-area" data-i18n="filter_area">Area</label>
+          <select id="filter-area" aria-label="Neighborhood area">
+            <option>Wazir Akbar Khan</option>
+            <option>Shahr-e-Naw</option>
+            <option>Karte Seh</option>
+            <option>Taimani</option>
+            <option>Qala-e-Fatullah</option>
+            <option>Khair Khana</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-beds" data-i18n="filter_beds">Bedrooms</label>
+          <select id="filter-beds" aria-label="Number of bedrooms">
+            <option>1+</option>
+            <option>2+</option>
+            <option>3+</option>
+            <option>4+</option>
+            <option>5+</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-budget" data-i18n="filter_budget">Budget</label>
+          <select id="filter-budget" aria-label="Budget range">
+            <option>$50k – $100k</option>
+            <option>$100k – $250k</option>
+            <option>$250k – $500k</option>
+            <option>$500k+</option>
+          </select>
+        </div>
+        <a href="https://wa.me/937XXXXXXXX?text=I%20am%20looking%20for%20a%20property%20in%20Kabul." class="btn btn--primary filter-strip__btn" target="_blank" rel="noopener noreferrer" data-i18n="filter_search">Search</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LISTINGS ===== -->
+  <section class="listings section" id="listings-grid">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow" data-i18n="listings_eyebrow">Available Properties</span>
+        <h2 data-i18n="listings_title">Curated for Discerning Buyers</h2>
+      </div>
+
+      <div class="listings__grid">
+
+        <article class="prop-card reveal">
+          <div class="prop-card__img" style="--img-hue: 142" role="img" aria-label="Wazir Akbar Khan Residence property">
+            <span class="badge badge--sale" data-i18n="badge_sale">For Sale</span>
+            <span class="prop-card__price">$620,000</span>
+          </div>
+          <div class="prop-card__body">
+            <h3 class="prop-card__title">Wazir Akbar Khan Residence</h3>
+            <div class="prop-card__meta">
+              <span>4 <span data-i18n="meta_bed">Bed</span></span>
+              <span aria-hidden="true">·</span>
+              <span>3 <span data-i18n="meta_bath">Bath</span></span>
+              <span aria-hidden="true">·</span>
+              <span>350 m²</span>
+            </div>
+            <a href="https://wa.me/937XXXXXXXX?text=Interested%20in%20Wazir%20Akbar%20Khan%20Residence" class="btn btn--outline btn--full" target="_blank" rel="noopener noreferrer" data-i18n="cta_inquire">Inquire Now</a>
+          </div>
+        </article>
+
+        <article class="prop-card reveal">
+          <div class="prop-card__img" style="--img-hue: 158" role="img" aria-label="Shahr-e-Naw Modern Apartment property">
+            <span class="badge badge--rent" data-i18n="badge_rent">For Rent</span>
+            <span class="prop-card__price">$2,500/mo</span>
+          </div>
+          <div class="prop-card__body">
+            <h3 class="prop-card__title">Shahr-e-Naw Modern Apartment</h3>
+            <div class="prop-card__meta">
+              <span>3 <span data-i18n="meta_bed">Bed</span></span>
+              <span aria-hidden="true">·</span>
+              <span>2 <span data-i18n="meta_bath">Bath</span></span>
+              <span aria-hidden="true">·</span>
+              <span>180 m²</span>
+            </div>
+            <a href="https://wa.me/937XXXXXXXX?text=Interested%20in%20Shahr-e-Naw%20apartment" class="btn btn--outline btn--full" target="_blank" rel="noopener noreferrer" data-i18n="cta_inquire">Inquire Now</a>
+          </div>
+        </article>
+
+        <article class="prop-card reveal">
+          <div class="prop-card__img" style="--img-hue: 130" role="img" aria-label="Taimani Family Home property">
+            <span class="badge badge--sale" data-i18n="badge_sale">For Sale</span>
+            <span class="prop-card__price">$380,000</span>
+          </div>
+          <div class="prop-card__body">
+            <h3 class="prop-card__title">Taimani Family Home</h3>
+            <div class="prop-card__meta">
+              <span>5 <span data-i18n="meta_bed">Bed</span></span>
+              <span aria-hidden="true">·</span>
+              <span>4 <span data-i18n="meta_bath">Bath</span></span>
+              <span aria-hidden="true">·</span>
+              <span>420 m²</span>
+            </div>
+            <a href="https://wa.me/937XXXXXXXX?text=Interested%20in%20Taimani%20Family%20Home" class="btn btn--outline btn--full" target="_blank" rel="noopener noreferrer" data-i18n="cta_inquire">Inquire Now</a>
+          </div>
+        </article>
+
+        <article class="prop-card reveal">
+          <div class="prop-card__img" style="--img-hue: 155" role="img" aria-label="Karte Seh Executive Suite property">
+            <span class="badge badge--rent" data-i18n="badge_rent">For Rent</span>
+            <span class="prop-card__price">$1,800/mo</span>
+          </div>
+          <div class="prop-card__body">
+            <h3 class="prop-card__title">Karte Seh Executive Suite</h3>
+            <div class="prop-card__meta">
+              <span>2 <span data-i18n="meta_bed">Bed</span></span>
+              <span aria-hidden="true">·</span>
+              <span>2 <span data-i18n="meta_bath">Bath</span></span>
+              <span aria-hidden="true">·</span>
+              <span>140 m²</span>
+            </div>
+            <a href="https://wa.me/937XXXXXXXX?text=Interested%20in%20Karte%20Seh%20Executive%20Suite" class="btn btn--outline btn--full" target="_blank" rel="noopener noreferrer" data-i18n="cta_inquire">Inquire Now</a>
+          </div>
+        </article>
+
+        <article class="prop-card reveal">
+          <div class="prop-card__img" style="--img-hue: 138" role="img" aria-label="Qala-e-Fatullah Villa property">
+            <span class="badge badge--sale" data-i18n="badge_sale">For Sale</span>
+            <span class="prop-card__price">$490,000</span>
+          </div>
+          <div class="prop-card__body">
+            <h3 class="prop-card__title">Qala-e-Fatullah Villa</h3>
+            <div class="prop-card__meta">
+              <span>6 <span data-i18n="meta_bed">Bed</span></span>
+              <span aria-hidden="true">·</span>
+              <span>5 <span data-i18n="meta_bath">Bath</span></span>
+              <span aria-hidden="true">·</span>
+              <span>580 m²</span>
+            </div>
+            <a href="https://wa.me/937XXXXXXXX?text=Interested%20in%20Qala-e-Fatullah%20Villa" class="btn btn--outline btn--full" target="_blank" rel="noopener noreferrer" data-i18n="cta_inquire">Inquire Now</a>
+          </div>
+        </article>
+
+        <article class="prop-card reveal">
+          <div class="prop-card__img" style="--img-hue: 148" role="img" aria-label="Khair Khana Luxury Penthouse property">
+            <span class="badge badge--rent" data-i18n="badge_rent">For Rent</span>
+            <span class="prop-card__price">$3,200/mo</span>
+          </div>
+          <div class="prop-card__body">
+            <h3 class="prop-card__title">Khair Khana Luxury Penthouse</h3>
+            <div class="prop-card__meta">
+              <span>4 <span data-i18n="meta_bed">Bed</span></span>
+              <span aria-hidden="true">·</span>
+              <span>3 <span data-i18n="meta_bath">Bath</span></span>
+              <span aria-hidden="true">·</span>
+              <span>260 m²</span>
+            </div>
+            <a href="https://wa.me/937XXXXXXXX?text=Interested%20in%20Khair%20Khana%20Luxury%20Penthouse" class="btn btn--outline btn--full" target="_blank" rel="noopener noreferrer" data-i18n="cta_inquire">Inquire Now</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow" data-i18n="services_eyebrow">Our Services</span>
+        <h2 data-i18n="services_title">Everything You Need</h2>
+      </div>
+
+      <div class="services__grid">
+
+        <div class="service-card reveal">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 4L4 16h4v16h8v-8h4v8h8V16h4L18 4z" fill="currentColor" opacity="0.9"/>
+            </svg>
+          </div>
+          <h3 data-i18n="service_buy_title">Buy</h3>
+          <p data-i18n="service_buy_text">Navigate Kabul's property market with expert guidance. We connect you with verified sellers and the best deals available.</p>
+          <a href="https://wa.me/937XXXXXXXX?text=I'd%20like%20to%20buy%20a%20property%20in%20Kabul" class="service-card__link" target="_blank" rel="noopener noreferrer">
+            <span data-i18n="cta_talk">Let's Talk</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="service-card service-card--accent reveal">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="14" width="26" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 14v-3a6 6 0 0112 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="18" cy="23" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 data-i18n="service_rent_title">Rent</h3>
+          <p data-i18n="service_rent_text">Find the perfect rental — furnished or unfurnished — in Kabul's most sought-after neighborhoods.</p>
+          <a href="https://wa.me/937XXXXXXXX?text=I'm%20looking%20to%20rent%20a%20property%20in%20Kabul" class="service-card__link" target="_blank" rel="noopener noreferrer">
+            <span data-i18n="cta_talk">Let's Talk</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 4l2.5 7.5H28l-6.5 4.5 2.5 7.5L18 19l-6 4.5 2.5-7.5L8 11.5h7.5L18 4z" fill="currentColor" opacity="0.9"/>
+            </svg>
+          </div>
+          <h3 data-i18n="service_sell_title">Sell</h3>
+          <p data-i18n="service_sell_text">Get the best price for your property. Our network of qualified buyers ensures fast, seamless transactions.</p>
+          <a href="https://wa.me/937XXXXXXXX?text=I%20want%20to%20sell%20my%20property%20in%20Kabul" class="service-card__link" target="_blank" rel="noopener noreferrer">
+            <span data-i18n="cta_talk">Let's Talk</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about section" id="about">
+    <div class="container about__inner">
+
+      <div class="about__text reveal">
+        <span class="eyebrow" data-i18n="about_eyebrow">About Kabul Estates</span>
+        <h2 data-i18n="about_title">Kabul's Most Trusted Real Estate Partner</h2>
+        <p data-i18n="about_p1">Founded in the heart of Kabul, we have been guiding families and investors through property transactions for over a decade. Our deep knowledge of local neighborhoods, legal processes, and market dynamics sets us apart.</p>
+        <p data-i18n="about_p2">We believe every client deserves a premium experience — transparent pricing, honest advice, and a team that answers when you call.</p>
+        <a href="https://wa.me/937XXXXXXXX?text=Salaam%2C%20I%20want%20to%20learn%20more%20about%20Kabul%20Estates" class="btn btn--primary" target="_blank" rel="noopener noreferrer" data-i18n="cta_wa_hero">Chat on WhatsApp</a>
+      </div>
+
+      <div class="about__right reveal reveal--delay">
+        <div class="about__stat-card">
+          <div class="about__stat">
+            <span class="about__stat-num">500+</span>
+            <span class="about__stat-label" data-i18n="about_stat_1">Properties Sold</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-num">1,200+</span>
+            <span class="about__stat-label" data-i18n="about_stat_2">Happy Clients</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-num">12</span>
+            <span class="about__stat-label" data-i18n="about_stat_3">Neighborhoods</span>
+          </div>
+        </div>
+        <div class="about__deco" aria-hidden="true"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT CTA ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact__box reveal">
+        <span class="eyebrow eyebrow--light" data-i18n="contact_eyebrow">Ready to Start?</span>
+        <h2 data-i18n="contact_title">Your Dream Property Awaits</h2>
+        <p data-i18n="contact_sub">Reach out on WhatsApp for instant, personal service — no forms, no waiting.</p>
+        <a href="https://wa.me/937XXXXXXXX?text=Salaam%2C%20I'd%20like%20to%20discuss%20a%20property." class="btn btn--xl btn--dark" target="_blank" rel="noopener noreferrer" data-i18n="cta_wa_big">Start a Conversation</a>
+        <span class="contact__phone">+937 XXX XXXXX</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#hero" class="nav__logo" data-i18n="brand">Kabul Estates</a>
+        <p data-i18n="foot_tag">Premium Real Estate in Kabul, Afghanistan</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#listings-grid" data-i18n="nav_listings">Listings</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <p class="footer__copy">© <span id="year"></span> Kabul Estates. <span data-i18n="foot_rights">All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING WHATSAPP ===== -->
+  <a href="https://wa.me/937XXXXXXXX?text=Salaam%2C%20I'm%20interested%20in%20a%20property." class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 32 32" fill="white" aria-hidden="true" focusable="false">
+      <path d="M16 2C8.27 2 2 8.27 2 16c0 2.47.65 4.8 1.78 6.83L2 30l7.37-1.74A13.94 13.94 0 0016 30c7.73 0 14-6.27 14-14S23.73 2 16 2zm0 25.5c-2.1 0-4.08-.55-5.8-1.52l-.42-.25-4.37 1.03 1.05-4.26-.28-.44A11.47 11.47 0 014.5 16C4.5 9.6 9.6 4.5 16 4.5S27.5 9.6 27.5 16 22.4 27.5 16 27.5zm6.3-8.6c-.34-.17-2.02-.99-2.33-1.1-.31-.12-.54-.17-.77.17-.23.34-.88 1.1-1.08 1.33-.2.22-.4.25-.74.08-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.01-1.9-2.35-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.22-.34.34-.57.11-.23.06-.43-.03-.6-.08-.17-.77-1.85-1.05-2.53-.28-.66-.56-.57-.77-.58H11.4c-.23 0-.6.08-.91.4-.31.34-1.2 1.17-1.2 2.85s1.23 3.3 1.4 3.53c.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.02-.82 2.3-1.62.28-.8.28-1.49.2-1.63-.08-.14-.3-.22-.63-.39z"/>
+    </svg>
+  </a>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
